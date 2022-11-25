@@ -1,0 +1,183 @@
+<div id="layoutSidenav_content">
+                <main>
+                    <div class="">
+{{!-- <div class="container">
+    <div class="row pt-5">
+
+        <div class="col-md-2"></div>
+
+        <div class="col-md-6">
+            <form action="/admin/add-products" method="post" enctype="multipart/form-data">
+            
+                <h1 class="text-center">Add Product</h1>
+                {{#if adduserError}}
+                <p class="error text-danger">User alread Exists With Entered Mail Id</p>
+                {{/if}}
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Product Name</label>
+                    <input type="text" name="name" class="form-control " required="true" id="exampleInputEmail1"
+                        aria-describedby="emailHelp" placeholder="Enter Name">
+
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Select Category</label>
+
+                        <select class="w-100" name="category" id="cars" >
+
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="opel">Opel</option>
+                        <option value="audi">Audi</option>
+                    </select>
+                </div>
+                 <div class="form-group">
+                    <label for="exampleInputEmail1">Price</label>
+                    <input type="text" name="price" class="form-control " required="true" id="exampleInputEmail1"
+                        aria-describedby="emailHelp" placeholder="Enter Price">
+
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <div>
+                    <textarea class="w-100" id="description" name="description" rows="4" cols="50"></textarea>
+                    </div>
+                </div>
+                
+                
+                
+                
+                
+                
+                <input type="file" name="image">
+                <button type="submit" class="btn btn-primary ">Submit</button>
+            </form>
+        </div>
+    </div>
+</div> --}}
+
+
+
+
+<section class="vh-100  "  style="background-image: url('/images/hero-bg.jpg');background-repeat:r;">
+  <div class="container h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-lg-12 col-xl-11" >
+        <div class="card text-white " style=" background-color: rgba(255, 0, 0, 0.0); border-radius: 25px;">
+          <div class="card-body p-md-5">
+            <div class="row justify-content-center">
+              <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+
+                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Add Product</p>
+
+                <form action="/admin/add-product" method="post" enctype="multipart/form-data" class="mx-1 mx-md-4">
+                {{#if productRedundancyError}}
+                <p class="error text-danger pl-5 ">Entered Product Already Exists</p>
+                {{/if}}
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    {{!-- <i class="fas fa-user fa-lg me-3 fa-fw"></i> --}}
+                    <div class="form-outline flex-fill mb-0">
+                      <input type="text" name="name" required="true" id="form3Example1c" class="form-control" />
+                      <label class="form-label" for="form3Example1c">Name</label>
+                    </div>
+                  </div>
+
+
+
+                <div class="form-group">
+
+                        <select class="w-100" name="category" id="" >
+                          {{#each allCategories}}
+
+                        <option>{{this.category}}</option>
+                        {{/each}}
+                    </select>
+                   <div><label for="exampleInputEmail1">Select Category</label></div> 
+
+                </div>
+
+
+
+
+                  
+                   <div class="d-flex flex-row align-items-center mb-4">
+                    {{!-- <i class="fas fa-phone fa-lg me-3 fa-fw"></i> --}}
+                    <div class="form-outline flex-fill mb-0">
+                      <input type="number" name="price" required="true" id="form3Example3c" class="form-control" />
+                      <label class="form-label" for="form3Example3c">price</label>
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    {{!-- <i class="fas fa-lock fa-lg me-3 fa-fw"></i> --}}
+                    <div class="form-outline flex-fill mb-0">
+                      <input type="text" name="description" required="true" id="form3Example4c" class="form-control" />
+                      <label class="form-label" for="form3Example4c">Description</label>
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    {{!-- <i class="fas fa-lock fa-lg me-3 fa-fw"></i> --}}
+                    <div class="form-outline flex-fill mb-0">
+                      <input type="file" name="image1" required="true" id="form3Exeamhhple4c" class="form-control" />
+                      <label class="form-label" for="form3Example4c">Image1</label>
+                    </div>
+                  </div>
+                   <div class="d-flex flex-row align-items-center mb-4">
+                    {{!-- <i class="fas fa-lock fa-lg me-3 fa-fw"></i> --}}
+                    <div class="form-outline flex-fill mb-0">
+                      <input type="file" name="image2" required="true" id="form3Exaeewmhhple4c" class="form-control" />
+                      <label class="form-label" for="form3Example4c">Image2</label>
+                    </div>
+                  </div>
+                   <div class="d-flex flex-row align-items-center mb-4">
+                    {{!-- <i class="fas fa-lock fa-lg me-3 fa-fw"></i> --}}
+                    <div class="form-outline flex-fill mb-0">
+                      <input type="file" name="image3" required="true" id="formww3Examhhple4c" class="form-control" />
+                      <label class="form-label" for="form3Example4c">Image3</label>
+                    </div>
+                  </div>
+                   <div class="d-flex flex-row align-items-center mb-4">
+                    {{!-- <i class="fas fa-lock fa-lg me-3 fa-fw"></i> --}}
+                    <div class="form-outline flex-fill mb-0">
+                      <input type="file" name="image4" required="true" id="formqqq3Examhhple4c" class="form-control" />
+                      <label class="form-label" for="form3Example4c">Image4</label>
+                    </div>
+                  </div>
+
+                  
+                   
+
+                  
+                  {{!-- <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <input type="password" id="form3Example4cd" required="true" class="form-control" />
+                      <label class="form-label" for="form3Example4cd">Repeat your password</label>
+                    </div>
+                  </div> --}}
+                  <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                    <button type="submit" class="btn btn-primary btn-lg">Add Product</button>
+                  </div>
+
+                </form>
+
+              </div>
+              <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+
+                {{!-- <img src="/images/f2.png"
+                  class="img-fluid" alt="Sample image"> --}}
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+                    </div>
+                </main></div>

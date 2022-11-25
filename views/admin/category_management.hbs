@@ -1,0 +1,41 @@
+<div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+<div class="container">
+    <div class="row">
+     <a class="btn mt-5 btn-success ml-auto " style="width:10rem ;"  href="/admin/add-category">Add Category</a>
+        </div>
+    <div class="row d-block ">
+       
+        
+    
+        <table class="table mt-5 " id="viewusers">
+            <thead>
+                <tr>
+
+                    <th scope="col"></th>
+                    
+                    <th scope="col">Category Id</th>
+                    <th scope="col">Category Name</th>
+                    <th scope="col">Options</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                {{#each allCategories}}
+                <tr>
+                    <td>*</td>
+                    
+                    <th scope="row">{{_id}}</th>
+                    <td>{{this.category}}</td>
+                    {{!-- <td><a href="/admin/edit-user/{{this.email}}" onclick="" class="btn btn-primary">Edit User</a></td> --}}
+                    <td><a href="/admin/delete-category/{{this._id}}" onclick="return confirm('delete category {{this.category}}')" class="btn btn-danger">Delete Category</a></td>
+                    {{!-- <td><img style=" height:50px"  id="z" src="/product-images/{{this._id}}.jpg" alt="" ></td> --}}
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+                    </div></main></div>

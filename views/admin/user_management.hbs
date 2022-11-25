@@ -1,0 +1,46 @@
+<div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+<div class="container ">
+    <div class="row d-block ">
+       
+        
+    
+        <table class="table mt-5 " id="viewusers">
+            <thead>
+                <tr>
+                    
+                    <th scope="col">Customer Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Mobile</th>
+                    <th scope="col">Options</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                {{#each allUsers}}
+                <tr>
+                    
+                    <th scope="row">{{_id}}</th>
+                    <td>{{this.name}}</td>
+                    <td>{{this.email}}</td>
+                    <td>{{this.mobile}}</td>
+                    
+
+                    {{!-- <td><a href="/admin/edit-user/{{this.email}}" onclick="" class="btn btn-primary">Edit User</a></td> --}}
+                    {{#if this.isBlocked}}
+                    <td><a href="/admin/unblock-user/{{_id}}" onclick="return confirm('block user {{this.name}}')" class="btn btn-warning" style="width:8rem ;">unblock User</a></td>
+                    {{else}}
+                    <td><a href="/admin/block-user/{{_id}}" onclick="return confirm('block user {{this.name}}')" class="btn btn-danger" style="width:8rem ;" >block User</a></td>
+                    {{/if}}
+                    {{!-- <td><img style=" height:50px"  id="z" src="/product-images/{{this._id}}.jpg" alt="" ></td> --}}
+                    
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+                    </div></main></div>

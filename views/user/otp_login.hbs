@@ -1,0 +1,184 @@
+ {{!-- <div class="container-fluid " style="background-color: black;">
+            <div class="row h-100 align-items-center justify-content-center" style="min-height: 100vh;">
+                <div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4">
+                    <div class="bg-secondary rounded p-4 p-sm-5 my-4 mx-3">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <a href="index.html" class="">
+                                <h3 class="text-primary"><i class="fa fa-user-edit me-2"></i>DarkPan</h3>
+                            </a>
+                            <h3>Sign In</h3>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                            <label for="floatingInput">Email address</label>
+                        </div>
+                        <div class="form-floating mb-4">
+                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                            <label for="floatingPassword">Password</label>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between mb-4">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            </div>
+                            <a href="">Forgot Password</a>
+                        </div>
+                        <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Sign In</button>
+                        <p class="text-center mb-0">Don't have an Account? <a href="">Sign Up</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+         --}}
+
+
+{{!-- <div id="layoutSidenav_content">
+                <main>
+                    <div class="">
+
+
+<section class="vh-100" style="background-image: url('/images/hero-bg.jpg');">
+  <div class="container h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100  ">
+      <div class="col-lg-12 col-xl-11">
+        <div class="card text-black  " style="border-radius: 25px; opacity: 1; ">
+          <div class="card-body p-md-5 "  >
+            <div class="row justify-content-center">
+              <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+
+                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">User Login</p>
+
+                <form action="/admin/admin-login" method="post" class="mx-1 mx-md-4">
+                {{#if adminLoginError}}
+                <p class="error text-danger">Invalid Email Or Password</p>
+                {{/if}} --}}
+
+                  {{!-- <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <input type="text" required="true" name="name" id="form3Example1c" class="form-control" />
+                      <label class="form-label" for="form3Example1c">Your Name</label>
+                    </div>
+                  </div> --}}
+
+                  {{!-- <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <input type="email" name="email" required="true" id="form3Example3c" class="form-control" />
+                      <label class="form-label  " for="form3Example3c">Your Email</label>
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <input type="password" name="password" required="true" id="form3Example4c" class="form-control" />
+                      <label class="form-label" for="form3Example4c">Password</label>
+                    </div>
+                  </div> --}}
+                  {{!-- <a href="/admin/admin-signup">Add Admins</a> --}}
+
+                  {{!-- <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                    <button type="submit" class=" btn btn-primary btn-lg">Login</button>
+                  </div>
+
+                </form>
+
+              </div>
+              <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+
+                <img class="" src="/images/f2.png"
+                  class="img-fluid" alt="Sample image">
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> --}}
+
+
+
+
+
+                    {{!-- </div></main></div> --}}
+
+
+
+
+
+<section class="vh-100" style="background-image: url('/images/hero-bg.jpg');">
+  <div class="container h-75 ">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-lg-12 col-xl-11">
+        <div class="card text-white" style="border-radius: 25px;background-color: rgba(255, 0, 0, 0.0);">
+          <div class="card-body  p-md-5 " style="">
+            <div class="row justify-content-center">
+              <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+
+                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-1">Otp Login</p>
+
+                <form action="/otp-login" method="post" class="mx-1 mx-md-4">
+                {{#if loginError}}
+                <p class="error text-danger pl-5 ">Invalid Username Or Password</p>
+                {{/if}}
+                {{#if blockError}}
+                <p class="error text-danger pl-5 ">temporar blocked admin</p>
+{{/if}}
+
+                  {{!-- <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <input type="text" name="name" required="true" id="form3Example1c" class="form-control" />
+                      <label class="form-label" for="form3Example1c">Your Name</label>
+                    </div>
+                  </div> --}}
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-phone fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <input type="number" name="phone" required="true" id="form3Example3c" class="form-control" />
+                      <label class="form-label" for="form3Example3c">Your Mobile</label>
+                    </div>
+                  </div>
+
+                  {{!-- <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <input type="password" name="password" required="true" id="form3Example4c" class="form-control" />
+                      <label class="form-label" for="form3Example4c">Password</label>
+                    </div>
+                  </div> --}}
+                  {{!-- <a class="pl-5" href="/signup">Don't have an account? signUp</a> --}}
+
+
+                  <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4 pt-2">
+                    <button type="submit" class=" btn btn-danger btn-lg w-50" style="">Send SMS</button>
+                  </div>
+
+                </form>
+                
+{{!-- <a href="/otp-login" style="text-decoration: none;" ><div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4 pt-2">
+                    <button type="submit" class=" btn btn-danger btn-lg w-75" style="">OTP Login</button>
+                  </div></a> --}}
+
+
+              </div>
+              <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+
+                {{!-- <img src="/images/f2.png"
+                  class="img-fluid  " alt="Sample image"> --}}
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+         
